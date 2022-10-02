@@ -84,7 +84,7 @@ export class BST<K extends Comparable<K>, V> implements SymbolTableApi<K, V> {
     }
 
     node.leftNode = this.removeMinFor(node.leftNode);
-    node.size = 1 + (node?.leftNode?.size ?? 0) + (node?.leftNode?.size ?? 0);
+    node.size = 1 + (node?.leftNode?.size ?? 0) + (node?.rightNode?.size ?? 0);
 
     return node;
   }

@@ -96,6 +96,14 @@ describe('BST', () => {
       bst.remove(createComparableKey(100));
       expect(bst.size).toBe(7);
     });
+
+    it('removing the root', () => {
+      [1, 0, 6, 3, 2, 5, 4].forEach(v => bst.insert(createComparableKey(v), v));
+      expect(bst.size).toBe(7);
+      bst.remove(createComparableKey(1));
+      expect(bst.size).toBe(6);
+    });
+
   });
 
   describe('min', () => {
